@@ -1,6 +1,6 @@
 <div class="input-group mb-3">
-  <input [(ngModel)]="value" type="text" class="form-control" placeholder="Input Field {{index + 1}}" />
+  <input type="text" class="form-control" [value]="value" (input)="onInputChange($event.target.value)">
   <div class="input-group-append">
-    <button class="btn btn-primary" (click)="submit.emit()">Submit</button>
+    <button class="btn btn-outline-secondary" type="button" (click)="reset()">Reset</button>
   </div>
 </div>

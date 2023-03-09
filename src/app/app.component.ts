@@ -6,12 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  onSubmit(onSubmit: any, arg1: string) {
+  emit(emit: any) {
     throw new Error('Method not implemented.');
   }
   inputs: string[] = [''];
-  
-  addInput(): void {
+
+  constructor() {}
+
+  ngOnInit() {}
+
+  addInput() {
     this.inputs.push('');
   }
 }

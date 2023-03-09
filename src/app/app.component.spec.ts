@@ -37,11 +37,11 @@ describe('AppComponent', () => {
   });
 
   it('should submit the inputs when clicking on the "Submit" button', () => {
-    spyOn(component.onSubmit, 'emit');
+    spyOn(component, 'emit');
     component.inputs = ['input1', 'input2'];
     fixture.detectChanges();
     const submitButton = fixture.nativeElement.querySelectorAll('button')[1];
     submitButton.click();
-    expect(component.onSubmit.emit).toHaveBeenCalledWith(component.inputs);
+    expect(component.emit).toHaveBeenCalledWith(component.inputs);
   });
 });

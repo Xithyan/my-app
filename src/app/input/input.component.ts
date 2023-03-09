@@ -5,7 +5,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   template: `
     <div class="input-group mb-3">
       <input type="text" class="form-control" [value]="value" (input)="onInputChange($event)">
-      <button class="btn btn-outline-secondary" type="button" (click)="onRemove()">Remove</button>
+      <button class="btn btn-outline-secondary" type="button" (click)="onRemove()">Submit</button>
     </div>
   `,
 })
