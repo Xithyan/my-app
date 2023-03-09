@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -6,24 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent implements OnInit {
-  inputFields: any[] = [{ value: '' }];
-  viewComponent: any;
-value: any;
-remove: any;
-index: any;
+  @Output() submit = new EventEmitter<string>();
+  @Input() index!: number;
+  value: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  addInputField() {
-    this.inputFields.push({ value: '' });
-  }
-
-  submitValues() {
-    const inputValues = this.inputFields.map(inputField => inputField.value);
-    this.viewComponent.inputValues = inputValues;
-    this.inputFields = [{ value: '' }];
   }
 }
