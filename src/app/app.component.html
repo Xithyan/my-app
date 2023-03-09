@@ -1,20 +1,7 @@
-<div class="container mt-3">
-  <div class="row">
-    <div class="col-md-4">
-      <h4>Input Fields</h4>
-      <div *ngFor="let input of inputs; let i=index">
-        <app-input [(ngModel)]="inputs[i]"></app-input>
-      </div>
-      <div class="mt-3">
-        <button class="btn btn-primary" (click)="addInput()">Add Input</button>
-        <button class="btn btn-danger ml-2" (click)="removeInput()">Remove Input</button>
-      </div>
-    </div>
-    <div class="col-md-8">
-      <h4>Output</h4>
-      <div *ngFor="let input of inputs; let i=index">
-        {{ i+1 }} - {{ input }}<br>
-      </div>
-    </div>
-  </div>
+<h1>Dynamic Input Fields</h1>
+
+<button class="btn btn-primary" (click)="addInput()">Add Input</button>
+
+<div class="input-container mt-3">
+  <app-input *ngFor="let input of inputs; let i=index" [(value)]="inputs[i]"></app-input>
 </div>

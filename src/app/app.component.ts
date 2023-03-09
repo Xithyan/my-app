@@ -10,18 +10,8 @@ export class AppComponent {
     throw new Error('Method not implemented.');
   }
   inputs: string[] = [''];
-
-  addInput() {
+  
+  addInput(): void {
     this.inputs.push('');
-  }
-
-  removeInput() {
-    if (this.inputs.length > 1) {
-      this.inputs.pop();
-    }
-  }
-
-  printInputs() {
-    console.log(this.inputs);
   }
 }
