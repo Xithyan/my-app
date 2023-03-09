@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>View Container</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Index</th>
+        <th>Input Field Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let inputValue of inputValues; let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{inputValue}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

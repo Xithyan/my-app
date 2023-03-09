@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+  inputs: string[] = [''];
+
+  addInput() {
+    this.inputs.push('');
+  }
+
+  removeInput() {
+    if (this.inputs.length > 1) {
+      this.inputs.pop();
+    }
+  }
+
+  printInputs() {
+    console.log(this.inputs);
+  }
 }
